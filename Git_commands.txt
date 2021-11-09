@@ -12,3 +12,6 @@
 	3. git add -A --> To commet all the files/changes 
 	4. git commit -m 'comment' --> for single file
 	5. git commit -a -m 'comment'
+	6. git log --> To show the log of files commited in that particular folder
+	7. git branch 'branchname' --> to create a custom branch
+	8. git checkout 'branchname' --> to change/switch branch
