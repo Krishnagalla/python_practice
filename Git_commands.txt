@@ -1,0 +1,14 @@
+1. Install Git
+2. One bash file and add the username and email using bellow command
+	1. git config --global user.name "Username"
+	2. git config --global user.email "Email ID"
+3. Create a folder and follow the steps to get the main repo from git hub
+	1. git init
+	2. git remote add origin  'URL'
+	3. git pull origin main
+4. Commands
+	1. git status --> to see the status of files(Modified, newly created etc)
+	2. git add --> To add file to the index
+	3. git add -A --> To commet all the files/changes 
+	4. git commit -m 'comment' --> for single file
+	5. git commit -a -m 'comment'
