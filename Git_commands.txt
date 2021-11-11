@@ -16,3 +16,7 @@
 	7. git branch 'branchname' --> to create a custom branch
 	8. git checkout 'branchname' --> to change/switch branch
 	9. git merge <branchname> --> merge child branch to master. **make sure ur in the destination branch when merging
+5. To push pur code to git hub
+	1. ssh-keygen --> to generate an ssh key
+	2. copy the ssh key -> settings -> ssh and Gpg keys -> add new -> save
+	2. ssh -T git@github.com --> to authunticate our public key
