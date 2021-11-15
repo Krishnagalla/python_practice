@@ -27,30 +27,27 @@ print ("Modified files :" + " " +', '.join(modified_list))
 print ("New files :"+ " " + ', '.join(add_list))
 modified_join = ', '.join(modified_list)
 add_join = ', '.join(add_list)
-commit_ids = dict()
-if  modified_join or add_join :
-	user_ack = input('The above mentioned files will be commited, Please confirm (Y/N):')
-	if user_ack.upper() == 'Y':
-		if add_join:
-			add = sp.getoutput(f'git add -A')
-			print(add)
-			#split_add = add.split()
-			
-			#commit_ids['Add'] = split_add[1].rstrip(']') 
-			
-		if modified_join:
-			comment = input('Please provide a commit comment :')
-		if comment:
-			try:
-				comit = sp.getoutput(f'git commit -m {comment}')
-				print(f"commit {comit}")
-				commit_split = comit.split()
-				commit_ids['commit'] = commit_split[1].rstrip(']')
-			except os.error as e:
-				print(f"unable to comment {e}")
-	else:
-		exit(0)
-		
+username = sp.getoutput('git config user.name')
+print (username)
+
+# commit_ids = dict()
+# if  modified_join or add_join :
+# 	user_ack = input('The above mentioned files will be commited, Please confirm (Y/N):')
+# 	if user_ack.upper() == 'Y':
+# 		if add_join:
+# 			add = sp.getoutput(f'git add -A')
+# 			print(add)
+# 		if modified_join:
+# 			comment = input('Please provide a commit comment :')
+# 		if comment:
+# 			try:
+# 				comit = sp.getoutput(f'git commit -m {comment}')
+# 				print(f"commit {comit}")
+# 			except os.error as e:
+# 				print(f"unable to comment {e}")
+# 	else:
+# 		exit(0)
+# print ('Please take a note of list commit ids above')
 # print (modified_list)
 # print (add_list)
 #else:
