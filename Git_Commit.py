@@ -43,6 +43,7 @@ if  modified_join or add_join :
 		if comment:
 			try:
 				comit = sp.getoutput(f'git commit -m {comment}')
+				print(f"commit {comit}")
 				commit_split = comit.split()
 				commit_ids['commit'] = commit_split[1].rstrip(']')
 			except os.error as e:
