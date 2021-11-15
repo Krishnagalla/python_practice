@@ -27,7 +27,7 @@ print ("Modified files :" + " " +', '.join(modified_list))
 print ("New files :"+ " " + ', '.join(add_list))
 modified_join = ', '.join(modified_list)
 add_join = ', '.join(add_list)
-commit_ids = None
+commit_ids = dict()
 if  modified_join or add_join :
 	user_ack = input('The above mentioned files will be commited, Please confirm (Y/N):')
 	if user_ack.upper() == 'Y':
