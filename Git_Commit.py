@@ -46,8 +46,8 @@ if  modified_join or add_join :
 				print(f"unable to comment {e}")
 	else:
 		exit(0)
-print ('Please take a note of commit ids above')
-print (modified_list)
-print (add_list)
-#else:
-#    print('Please reenter the directory full path')
+	print ('Please take a note of commit ids above')
+	print (modified_list)
+	print (add_list)
+else:
+	print('Please reenter the directory full path')
