@@ -31,19 +31,23 @@ def fetch(conn, query):
 	except Error as fetch_error:
 		print (fetch_error)
 
-def insert_values(conn,query ):
+def insert_values(conn, query):
 	cursor = conn.cursor()
 	try:
+		print ('Inserting into DB')
 		cursor.execute(query)
-		#cursor.commit()
+		conn.commit()
+		print('Insertion completed')
 	except Error as e:
 		print(e)
 
 
-
+###########
+#Synopsis
+###########
 #create a connection
 # connection = sql_connection(host='127.0.0.1', username='dev_user', password='Devuser@45')
-
+# insert = insert_values(connection, '''insert into user_config (username, emailid, role, created) values ('K', 'K@g.com', 'Sr', sysdate())''')
 # # check db
 # db_check = fetch(connection, query= """SELECT SCHEMA_NAME
 #   FROM INFORMATION_SCHEMA.SCHEMATA

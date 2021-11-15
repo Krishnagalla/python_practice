@@ -4,3 +4,5 @@
 
 dev_key
 dev_key.pub
+__pycache__
+.gitignore
